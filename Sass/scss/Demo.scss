@@ -1,0 +1,441 @@
+$color_fondo_1024px :#fef9e7;
+$color_fond_720px: lightgreen;
+$color_fondo_600px : lightblue;
+
+$Letra_Titulos_h1 : 50px Monotype Corsiva;
+$Letra_Titulos_h2: 40px Monotype Corsiva;
+$Letra_Titulos_h3: 30px Monotype Corsiva;
+
+$Letra_p_descripcion : 30px Consolas;
+$Letra_p_preparacion : 20px Consolas;
+
+$Color_Footer: #202020;	
+
+@mixin sizes_img($width, $height) {
+   height: $height;
+   width: $width;
+}
+
+@import "footer";
+@import "estilorecetas";
+
+
+*{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-decoration: none;
+   border: none;
+   outline: none;
+}
+ .container-header{
+   width: 100%;
+   display: flex;
+   padding: 1px;
+   height: auto;
+
+}
+
+
+#Grilla{
+   display: grid;
+   grid-template-areas: 
+   "header"
+   "Index"
+   "footer";
+   grid-template-rows: 20% auto auto;
+   grid-template-columns: 100%;
+}
+header{
+   grid-area: header;
+}
+section#Index {
+   grid-area: Index;
+}
+footer{
+   grid-area: footer;
+}
+#GrillaReceta{
+   display: grid;
+   grid-template-areas: 
+   "header"
+   "Recetas"
+   "footer";
+   grid-template-rows: 20% auto auto;
+   grid-template-columns: 100%;
+}
+header{
+   grid-area: header;
+}
+section#Recetas {
+   grid-area: Recetas;
+}
+footer{
+   grid-area: footer;
+}
+#GrillaLogeoclase{
+   display: grid;
+   grid-template-areas: 
+   "header"
+   "Logeoclase"
+   "footer";
+   grid-template-rows: 20% auto auto;
+   grid-template-columns: 100%;
+}
+header{
+   grid-area: header;
+}
+section#Logeoclase {
+   grid-area: Logeoclase;
+}
+footer{
+   grid-area: footer;
+}
+
+
+
+@keyframes Efecto{
+   0%{opacity: 0;
+   }
+   100%{opacity: 1;
+   }
+}
+
+
+
+@media only screen and (min-width: 350px) and (max-width: 800px){
+  body {
+    background-color: $color_fondo_600px; 
+    padding: 1px;
+  }
+#Header{
+   width: 100%;
+   height: 160px;
+   margin:5px;
+   border: solid 2px; 
+}
+#ImagenPrin{
+   border: black 7px solid;
+   padding: 1px;
+   max-width: 100%;
+   max-height: 100%;
+   width: 1870px;
+   height: 800px;
+}
+
+#Header__Navbar{
+   font-family: Consolas;
+   margin: 5px;
+   font-size: 20px;
+   overflow : auto;
+}
+#Header__Nombre{
+   margin-top: 30px;
+   margin-right: 200px;
+   font-family: Consolas;
+   font-size: 40px;
+   animation-name: Efecto;
+   animation-duration: 3s;
+}
+#Header___Logo{
+   width: 100px;
+   height: 100px;
+   
+   border: black solid 2px;
+   margin-top: 30px;
+   padding: 1px;
+   animation-name: Efecto;
+   animation-duration: 3s;
+
+}
+#Paginasrecetas__img{
+   @include sizes_img(500px,300px);
+   border: green 5px solid;
+   margin: 5px;
+}
+#Header__Buscador{
+   border:solid 1px;
+   padding: 3px;
+   margin-top: 40px; 
+
+}
+#Index__Descripcion{
+       margin-top: 30px;
+       padding: 2px;
+}
+#Index__Descripcion--p{
+   line-height: 50px;
+   font:$Letra_p_descripcion;
+}
+.index h1{
+   font: $Letra_Titulos_h1;
+   transform: translate(45%);
+   text-decoration: underline black;
+
+
+}
+#Index {
+   margin: 30px;
+   padding: 1px;
+}
+#Index__h2{
+   font: $Letra_Titulos_h2;
+   transform: translate(44%);
+   text-decoration: underline black;
+}
+
+#Index__h3{
+   font: $Letra_Titulos_h3;
+   text-decoration: underline black;
+}
+
+#Index___ul{
+   font-size:20px;
+   line-height: 30px;
+}
+#Index__p{
+   font:$Letra_p_preparacion;
+   word-spacing: 7px;
+   line-height: 30px;
+
+}
+#Index__img{
+   @include sizes_img(500px,300px);
+   border: blue 5px solid;
+   padding: 1px;
+   max-width: 100%;
+   max-height: auto;
+   margin: 5px;
+}
+#column{
+   width: 30%;
+}
+}
+
+
+@media only screen and (min-width: 801px) and (max-width: 1023px){
+  body {
+    background-color: $color_fond_720px; 
+    padding: 1px;
+  }
+
+#Header{
+   width: 100%;
+   height: 160px;
+   margin:5px;
+   border: solid 2px; 
+}
+#ImagenPrin{
+   border: black 7px solid;
+   padding: 1px;
+   max-width: 100%;
+   max-height: 100%;
+   width: 900px;
+   height: 600px;
+}
+
+#Header__Navbar{
+   font-family: Consolas;
+   margin: 10px;
+   font-size: 20px;
+}
+#Header__Nombre{
+   margin-top: 30px;
+   margin-right: 200px;
+   font-family: Consolas;
+   font-size: 40px;
+   animation-name: Efecto;
+   animation-duration: 3s;
+}
+#Header___Logo{
+   width: 100px;
+   height: 100px;
+   border: black solid 2px;
+   margin-top: 30px;
+   padding: 1px;
+   animation-name: Efecto;
+   animation-duration: 3s;
+
+}
+#Paginasrecetas__img{
+   @include sizes_img(700px,400px);
+   border: green 5px solid;
+   margin: 5px;
+
+}
+#Header__Buscador{
+   border:solid 1px;
+   padding: 3px;
+   margin-top: 40px; 
+
+}
+#Index__Descripcion{
+       margin-top: 30px;
+       padding: 2px;
+}
+#Index__Descripcion--p{
+   line-height: 50px;
+   font:$Letra_p_descripcion;
+}
+.index h1{
+   font: $Letra_Titulos_h1;
+   transform: translate(45%);
+   text-decoration: underline black;
+
+
+}
+#Index {
+   margin: 30px;
+   padding: 1px;
+}
+#Index__h2{
+   font: $Letra_Titulos_h2;
+   transform: translate(44%);
+   text-decoration: underline black;
+}
+
+#Index__h3{
+   font: $Letra_Titulos_h3;
+   text-decoration: underline black;
+}
+
+#Index___ul{
+   font-size:20px;
+   line-height: 30px;
+}
+#Index__p{
+   font:$Letra_p_preparacion;
+   word-spacing: 7px;
+   line-height: 30px;
+
+}
+#Index__img{
+   height: 500px;
+   width: 900px;
+   border: blue 5px solid;
+   padding: 1px;
+   max-width: 100%;
+   max-height: auto;
+}
+
+}
+
+@media only screen and (min-width: 1024px){
+  body {
+    background-color: $color_fondo_1024px; 
+    padding: 1px;
+  }
+
+#Header{
+   width: 100%;
+   height: 160px;
+   margin:5px;
+   border: solid 2px; 
+}
+#ImagenPrin{
+   border: black 7px solid;
+   padding: 1px;
+   max-width: 100%;
+   max-height: 100%;
+   width: 1870px;
+   height: 800px;
+}
+
+#Header__Navbar{
+   font-family: Consolas;
+   margin: 10px;
+   font-size: 20px;
+
+}
+#Header__Nombre{
+   margin-top: 30px;
+   margin-right: 200px;
+   font-family: Consolas;
+   font-size: 40px;
+   animation-name: Efecto;
+   animation-duration: 3s;
+}
+#Header___Logo{
+   width: 100px;
+   height: 100px;
+   border: black solid 2px;
+   margin-top: 30px;
+   padding: 1px;
+   animation-name: Efecto;
+   animation-duration: 3s;
+
+}
+#Paginasrecetas__img{
+  @include sizes_img(800px,650px);
+   border: green 5px solid;
+   margin: 5px;
+
+}
+#Header__Buscador{
+   border:solid 1px;
+   padding: 3px;
+   margin-top: 40px; 
+
+}
+#Index__Descripcion{
+       margin-top: 30px;
+       padding: 2px;
+}
+#Index__Descripcion--p{
+   line-height: 50px;
+   font:$Letra_p_descripcion;
+}
+.index h1{
+   font: $Letra_Titulos_h1;
+   transform: translate(45%);
+   text-decoration: underline black;
+
+
+}
+#Index {
+   margin: 30px;
+   padding: 1px;
+}
+#Index__h2{
+   font: $Letra_Titulos_h2;
+   transform: translate(44%);
+   text-decoration: underline black;
+}
+
+#Index__h3{
+   font: $Letra_Titulos_h3;
+   text-decoration: underline black;
+}
+
+#Index___ul{
+   font-size:20px;
+   line-height: 30px;
+}
+#Index__p{
+   font:$Letra_p_preparacion;
+   word-spacing: 7px;
+   line-height: 30px;
+
+}
+#Index__img{
+   @include sizes_img(900px,600px);
+   border: blue 5px solid;
+   padding: 1px;
+   max-width: 100%;
+   max-height: auto;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

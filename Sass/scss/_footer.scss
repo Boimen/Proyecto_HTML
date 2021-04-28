@@ -1,0 +1,37 @@
+$colors:(
+   facebook: #3a5795,
+   instagram: #C25E30
+);
+
+@each $name-color, $bgcolor in $colors {
+   #Footer_img--#{$name-color} {
+       background-color: $bgcolor;
+       width: 35px;
+       height: 35px;
+   }
+}
+
+
+#Footer{
+   width: 100%;
+   height: auto;
+   padding: 2px;
+   background: $Color_Footer;
+   color: white;
+   word-spacing: 7px;
+   border-spacing: 10px;
+   font-size: 20px;
+   font-family: Nyala;
+}
+
+#Footer__img{
+   border-color: $Color_Footer;
+}
+
+
+
+#Footer__Footerrow{
+   width: 100%;
+   height: auto;
+   padding: 2em;
+}

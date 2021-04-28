@@ -1,0 +1,84 @@
+/*---------Estilos paginas---------*/
+
+@mixin sizes_img($width, $height) {
+   height: $height;
+   width: $width;
+}
+
+
+#Recetas {
+	padding:2em;
+}
+#Recetas__h1{
+   font: $Letra_Titulos_h1;
+   text-decoration: underline black;
+}
+#Recetas__img:hover{
+ 
+   transform: translate(5px,5px);
+   box-shadow: 10px;
+}
+#Recetas__img--display{
+   @extend #Recetas__img;
+   @include sizes_img(700px,600px);
+   border: green 5px solid;
+   margin: 5px;
+}
+
+#Paginarecetas{
+	padding:2em;
+}
+
+#Paginasrecetas__h1{
+   font: $Letra_Titulos_h1;
+   transform: translate(41%);
+   text-decoration: underline black;
+}
+#Paginasrecetas__h2{
+   font: $Letra_Titulos_h2;
+   text-decoration: underline black;
+}
+#Paginasrecetas__h3{
+   font: $Letra_Titulos_h3;
+   text-decoration: underline black;
+}
+#Paginasrecetas__p{
+   font:$Letra_p_preparacion;
+   word-spacing: 5px;
+   line-height: 30px;
+} 
+
+#Paginasrecetas__ul{
+   word-spacing: 5px;
+   line-height: 30px;
+   padding: 5px;
+
+}
+
+
+
+.padre-flex-recetas{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.linea_receta{
+   border:3px dotted #000;
+
+}
+.form-register h1{
+   text-decoration: underline;
+}
+.inputusuario{
+   margin:20px;
+}
+#CuadroLogeo{
+   padding: 10px;
+   margin: 200px;
+}
+
+
