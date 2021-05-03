@@ -21,7 +21,7 @@
 #Recetas__img--display{
    @extend #Recetas__img;
    @include sizes_img(700px,600px);
-   border: green 5px solid;
+   border: blue 5px double;
    margin: 5px;
 }
 
